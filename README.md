@@ -16,6 +16,57 @@ The system consists of the following main subsystems:
 6. **Grid Connection** – Synchronizes inverter output with the grid to export real power.
 
 ---
+## ☀️ PV Array Information
+
+**Module:** Newpowa 5 W / 12 V  
+**Number of Modules:** 12  
+
+| Parameter | Symbol | Value |
+|------------|---------|-------|
+| Power Rating | P<sub>mp</sub> | 6.0795 W |
+| Short-Circuit Current | I<sub>sc</sub> | 0.37 A |
+| Max-Power Current | I<sub>mp</sub> | 0.35 A |
+| Open-Circuit Voltage | V<sub>oc</sub> | 20.04 V |
+| Max-Power Voltage | V<sub>mp</sub> | 17.37 V |
+
+---
+
+### 🔋 String Configuration
+*(4 modules per string)*  
+
+| Parameter | Expression | Value |
+|------------|-------------|--------|
+| String V<sub>oc</sub> | 4 × 20.04 V | ≈ 80.16 V |
+| String V<sub>mp</sub> | 4 × 17.37 V | ≈ 69.48 V |
+| String I<sub>mp</sub> | — | ≈ 0.35 A |
+
+---
+
+### ⚡ Parallel Strings
+*(3 parallel strings)*  
+
+| Parameter | Expression | Value |
+|------------|-------------|--------|
+| Array I<sub>sc</sub> | 3 × 0.37 A | = 1.11 A |
+| Array I<sub>mp</sub> | 3 × 0.35 A | = 1.05 A |
+| Array V<sub>mp</sub> | — | 69.48 V (same as string V<sub>mp</sub>) |
+| Array V<sub>oc</sub> | — | 80.16 V (same as string V<sub>oc</sub>) |
+
+---
+
+### ⚙️ Total PV Array Power
+
+\[
+P_{array} = V_{mp,array} \times I_{mp,array}
+\]
+
+\[
+P_{array} = 69.48 \times 1.05 \approx \mathbf{72.95\ W}
+\]
+
+---
+
+> 💡 *Note:* These calculations are based on 4 modules per string and 3 parallel strings. Configuration can be adjusted as needed for different design scenarios.
 
 ## 🧩 Simulink Model
 
@@ -64,13 +115,5 @@ The simulation verifies:
 
 ---
 
-## 🚀 How to Run
-
-1. Open `PV_5MW_GridConnected.slx` in MATLAB/Simulink (R2023b or later).  
-2. Set the simulation mode to **Continuous**.  
-3. Run the model and observe signals in the **Scope** blocks or **Simulink Data Inspector**.  
-4. Adjust irradiance and temperature to test dynamic performance.
-
----
 
 
