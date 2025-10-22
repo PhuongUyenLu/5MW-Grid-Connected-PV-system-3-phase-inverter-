@@ -1,0 +1,10 @@
+S = 6388260;    % apparent or output power (VA or W) = 3.048 MW
+Vdc = 800;      % DC link voltage (V)
+Vac = 480;      % AC line-to-line RMS voltage (V)
+                % 480 V L-L RMS (US industrial)
+
+delip = 0.005 * (S / Vac);  %Peak current ripple target
+
+ma = Vac * sqrt(2) / Vdc;   %modulation index of the PWM inverter.
+fsw = 10e3; %Switching frequency, The PWM switching frequency is 10 kHz
+L = (2/3) * ((ma * Vdc * (1 - ma)) / (delip * 2 * fsw));%Inductor value
