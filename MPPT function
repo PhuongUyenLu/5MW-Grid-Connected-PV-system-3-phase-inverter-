@@ -1,0 +1,55 @@
+function D = mppt(V,I)
+
+Dinit = 0.42;
+Dmax = 0.9;
+Dmin = 0.1;
+deltaD = 0.00008;
+
+persistent Vold Pold Dold M Iold;
+
+deltaType = 'double';
+
+if isempty(Vold)
+    Vold = 0;
+    Pold = 0;
+    Iold = 0;
+    Dold = Dinit;
+    M = 1;
+end
+
+P = V*I;
+dV = V-Vold;
+dP = P-Pold;
+dI = I-Iold;
+M = 1;
+
+if M<0.005
+    D=Dold;
+else
+    if dV==0
+        if dI==0
+            D=Dold;
+        elseif dI>0
+            D=Dold-(M*deltaD);
+        else
+            D=Dold+(M*deltaD);
+        end 
+    else 
+        if dI/dV == -I/V
+            D=Dold;
+        elseif dI/dV > -I/V
+             D=Dold-(M*deltaD);
+        else
+             D=Dold+(M*deltaD);
+        end
+    end
+end
+
+if D>=Dmax|D<=Dmin
+    D=Dold;
+end
+
+Dold=D;
+Pold=P;
+Vold=V;
+Iold=I;
