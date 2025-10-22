@@ -57,11 +57,11 @@ The system consists of the following main subsystems:
 ### ⚙️ Total PV Array Power
 
 \[
-P_{array} = V_{mp,array} \times I_{mp,array}
+P_{\text{array}} = V_{\text{mp,array}} \times I_{\text{mp,array}}
 \]
 
 \[
-P_{array} = 69.48 \times 1.05 \approx \mathbf{72.95\ W}
+P_{\text{array}} = 69.48 \times 1.05 \approx \mathbf{72.95\ \text{W}}
 \]
 
 ---
