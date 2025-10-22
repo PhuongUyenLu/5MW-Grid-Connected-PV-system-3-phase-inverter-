@@ -66,7 +66,6 @@ $$
 
 ---
 
-> 💡 *Note:* These calculations are based on 4 modules per string and 3 parallel strings. Configuration can be adjusted as needed for different design scenarios.
 
 ## 🧩 Simulink Model
 
