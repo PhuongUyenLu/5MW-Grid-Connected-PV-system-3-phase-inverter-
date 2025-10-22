@@ -71,7 +71,8 @@ P_{array} = 69.48 \times 1.05 \approx \mathbf{72.95\ W}
 ## 🧩 Simulink Model
 
 
-![Simulink Model]([Simulink_Model.png](https://github.com/PhuongUyenLu/5MW-Grid-Connected-PV-system-3-phase-inverter-/blob/7d31ef1c8ad339d630c20d2b5689bf53b0babad2/Screenshot%202025-10-21%20234707.png))
+![Simulink Model Screenshot](Screenshot%202025-10-21%20234707.png)
+
 
 **Figure 1.** *Simulink model of the 5 MW grid-connected photovoltaic system with MPPT, DC-link control, and 3-phase inverter.*
 
