@@ -119,5 +119,5 @@ The simulation verifies:
 
 ![Simulation Result](https://github.com/PhuongUyenLu/5MW-Grid-Connected-PV-system-3-phase-inverter-/blob/main/Screenshot%202025-10-22%20000728.png?raw=true)
 
-
+[![Screenshot of Simulink Model](https://github.com/PhuongUyenLu/5MW-Grid-Connected-PV-system-3-phase-inverter-/blob/f85d6f375812bd47e70a18a8ff413f7aef3eb42d/Screenshot%202025-10-22%20000752.png)
 
