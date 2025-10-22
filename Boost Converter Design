@@ -1,0 +1,13 @@
+P = 6388260;     % PV array power (W) 
+Vin = 14*29.54;     % PV input voltage
+fs = 10e3;       % Switching frequency = 10 kHz
+Vout = 800;      % Desired DC bus (grid-link) voltage
+
+Ioutmax=P/Vout;  %compute output current   
+delIL = 0.01 * Ioutmax * (Vout/Vin);    %Inductor current ripple
+
+delvout = 0.01 * Vout;  % 1% voltage ripple
+L = (Vin * (Vout - Vin)) / (delIL * fs * Vout); %Inductor design equation
+C = (Ioutmax * (1 - (Vin/Vout))) / (fs * delvout);%Output capacitor equation
+R = Vout / Ioutmax; %Equivalent load resistance
+d = (Vout - Vin) / Vout; %Duty cycle
