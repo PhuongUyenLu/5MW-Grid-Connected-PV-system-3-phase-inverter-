@@ -115,6 +115,9 @@ The simulation verifies:
 - Real power transfer from PV array to the grid  
 
 ---
+[![Screenshot of Simulink Model](https://github.com/PhuongUyenLu/5MW-Grid-Connected-PV-system-3-phase-inverter-/blob/21ac082cb7c2ad21738fcd70f8ca7f665dead2cb/Screenshot%202025-10-22%20000451.png?raw=true)](https://github.com/PhuongUyenLu/5MW-Grid-Connected-PV-system-3-phase-inverter-/blob/21ac082cb7c2ad21738fcd70f8ca7f665dead2cb/Screenshot%202025-10-22%20000451.png)
+
+*Click the image to view full-size.*
 
 
 
